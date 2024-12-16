@@ -18,6 +18,10 @@
             padding: 10px 20px;
             display: flex;
             justify-content: center;
+            position: fixed;
+            right: 0;
+            left:0;
+            z-index: 1000;
         }
         nav a {
             color: white;
@@ -36,6 +40,7 @@
             color: white;
             padding: 40px;
             text-align: center;
+            height: 20vh;
         }
         header .text {
             text-align: center;
@@ -55,11 +60,20 @@
             margin: 0 auto;
         }
         section {
-            margin-bottom: 40px;
+        padding-top: 4%;
+            margin-bottom: 150px;
             text-align: center;
+            height: 100%;
         }
         h1, h2 {
-            color: #4CAF50;
+            color: #f4661b;
+            margin-bottom: 5%;
+        }
+        article{
+            color:white;
+        }
+        article a{
+            color:#f4661b;
         }
         .projects {
             display: grid;
@@ -100,31 +114,258 @@
             vertical-align: middle;
         }
         #loisirs {
-    background-color: #f4f4f9;
-    padding: 20px;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .loisirs-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .loisir {
+            background-color: #00308F;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            width: 22%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .skill-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 120px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .skill-box img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 10px;
+        }
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #4CAF50;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: white;
+            border: 4px solid #4CAF50;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item.left {
+            left: 0;
+        }
+        .timeline-item.right {
+            left: 50%;
+        }
+        .timeline-item .content {
+            padding: 20px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .formations {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 5px;
+
 }
 
-.loisirs-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.formations::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    bottom: 20px;
+    left: 50%;
+    width: 8px;
+    background: #00308F;
+    border-radius: 3px;
+    z-index: 1;
 }
 
-.loisir {
-    background-color: #00308F; /* bleu #00308F */
-    border-radius: 8px;
+.formations article {
+    position: relative;
+    background: #00308F;
+    width: calc( 50% - 70px );
     padding: 15px;
-    text-align: center;
-    width: 22%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    color: white; /* pour le texte */
 }
 
-.loisir .icon {
-    width: 40px;
-    height: 40px;
+.formations article + article {
+    margin-top: 20px;
+}
+
+.formations article::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc( 100% + 26px );
+    background: #d6d6d6;
+    width: 24px;
+    height: 24px;
+    border: 6px #f4661b solid;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.formations article::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 16px solid #eeeeee;
+    border-bottom: 20px solid transparent;
+}
+
+.formations article:nth-child(even) {
+    margin-left: calc( 50% + 48px );
+}
+
+.formations article:nth-child(even)::before {
+    left: auto;
+    right: calc( 100% + 26px );
+}
+
+.formations article:nth-child(even)::after {
+    left: auto;
+    right: 100%;
+    border-left: none;
+    border-right: 16px solid #eeeeee;
+}
+    #presentation{
+        font-size: 1.2rem; /* Augmente la taille de la police */
+        text-align: justify; /* Justifie le texte */
+        line-height: 1.6; /* Ajoute un espacement agréable entre les lignes */
+        margin: 0 10px; /* Ajoute une marge horizontale */
+        right: 0;
+        left: 0;
+        /*background-image:url(img/dev.png);*/
+        background-size: contain;
+        background-position: center;
+        height: 100%;
+
+    }
+
+    #presentation h2 {
+    text-align: center; /* Centre le titre */
+    margin-bottom: 20px; /* Ajoute un espace sous le titre pour l'esthétique */
+}
+
+    .skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+.skill-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 120px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-box {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 30px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    background-color: #00308F;
+    color: white;
+    transition: transform 0.3s;
+}
+.skill-box:hover{
+    transform: scale(1.1);
+}
+
+
+
+.skill-box img{
+    width: 30%;
+    height: auto;
     margin-bottom: 10px;
+}
+.project:hover {
+    background-color: #00308F;
+    color: white;
+    transform: scale(1.07);
+
+}
+.project:hover a{
+    
+    color: #f4661b;
+}
+.project a{
+    color: black ;
+}
+.project {
+
+transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
+.loisir:hover{
+    transform: scale(1.1);
+}
+.loisir{
+    transition: transform 0.3s;
+
+}
+.loisir img{
+    height: auto;
+    width: 50%;
+    
 }
 
     </style>
@@ -135,15 +376,15 @@
     <a href="#projects">Projets</a>
     <a href="#soft-skills">Soft Skills</a>
     <a href="#hard-skills">Hard Skills</a>
-    <a href="#formation">Formation</a>
+    <a href="#sectionF">Formations</a>
     <a href="#loisirs">Loisirs</a>
     <a href="#contact">Contact</a>
+    <a href="cv.pdf">Télécharger mon CV</a>
 </nav>
 
 <header>
     <div class="text">
         <h1>Mathys Bollengier</h1>
-        <p>Étudiant en 2e année de BUT Informatique à Lille</p>
     </div>
 </header>
 
@@ -157,42 +398,103 @@
         <h2>Projets</h2>
         <div class="projects">
             <div class="project">
-                <h3>Gestionnaire de tâches</h3>
-                <p>Application web permettant de gérer des tâches avec une interface intuitive. Développée en HTML, CSS et JavaScript.</p>
+                <h3>Analyse des données Parcoursup</h3>
+                <p>Création d'une base de données permettant de ventiler les données de Parcoursup et d'en faire une analyse statistique.</p>
             </div>
             <div class="project">
-                <h3>Analyse de données</h3>
-                <p>Programme Python pour analyser des données volumineuses et générer des visualisations interactives.</p>
+                <a href="https://gitlab.univ-lille.fr/2024-projet-agile-de-rentree/groupe-13"><h3>Jeu vidéo</h3></a>
+                <p>Création d'un jeu vidéo dans la console de l'IDE intégrant les notions de première année et une initiation à la méthode Agile.</p>
             </div>
             <div class="project">
-                <h3>Portfolio en ligne</h3>
-                <p>Création d'un portfolio numérique pour présenter mes projets et compétences. Réalisé avec React et Node.js.</p>
+                <a href="https://gitlab.univ-lille.fr/mathys.bollengier.etu/classification"><h3>Logiciel de classification et prédiction</h3></a>
+                <p>Développement d'un logiciel permettant de classifier et de prédire la catégorie d'une donnée en fonction d'un set de données.</p>
             </div>
         </div>
     </section>
 
     <section id="soft-skills">
         <h2>Soft Skills</h2>
-        <p>Communication, Travail d'équipe, Résolution de problèmes, Adaptabilité.</p>
+        <div class="skills-container">
+            <div class="skill-box">
+                <p>Communication</p>
+                <img src="img/communication.png" alt="Communication">
+            </div>
+            <div class="skill-box">
+                <p>Travail d'équipe</p>
+                <img src="img/travail.png" alt="Travail d'équipe">
+            </div>
+            <div class="skill-box">
+                <p>Résolution de problèmes</p>
+                <img src="img/resolution.png" alt="Résolution">
+            </div>
+            <div class="skill-box">
+                <p>Adaptabilité</p>
+                <img src="img/adapabilite.png" alt="Adaptabilité">
+            </div>
+        </div>
     </section>
 
     <section id="hard-skills">
         <h2>Hard Skills</h2>
-        <p>Programmation (Python, Java, C++), Développement web (HTML, CSS, JavaScript), Bases de données (SQL), Analyse de données.</p>
+        <div class="skills-container">
+            <div class="skill-box">
+                <img src="img/python.png" alt="Python">
+                <p>Python</p>
+            </div>
+            <div class="skill-box">
+                <img src="img/java.png" alt="Java">
+                <p>Java</p>
+            </div>
+            <div class="skill-box">
+                <img src="img/html.png" alt="HTML">
+                <p>HTML</p>
+            </div>
+            <div class="skill-box">
+                <img src="img/css.png" alt="CSS">
+                <p>CSS</p>
+            </div>
+            <div class="skill-box">
+                <img src="img/sql.png" alt="SQL">
+                <p>SQL</p>
+            </div>
+            <div class="skill-box">
+                <img src="img/c.png" alt="C">
+                <p>C</p>
+            </div>
+        </div>
     </section>
 
-    <section id="formation">
-        <h2>Formation</h2>
-        <p>BUT Informatique, Université de Lille (2022 - Présent).</p>
-    </section>
-
+    <section id="sectionF">
+        <!-- Section de formation -->
+        <div class="container">
+            <div class="content">
+                <h2>Formations</h2>
+                <div class="formations">
+                    <article>
+                        <div class="formation">
+                            <h3>BUT  Informatique</h3>
+                            <p><a href="https://www.univ-lille.fr/">Université de Lille</a></p>
+                            <p class="dates">2023 - 20XX</p>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="formation">
+                            <h3>Bac Général mention Bien</h3>
+                            <p><a href="https://www.lycee-mireille-grenet.fr/">Lycée Mireille Grenet</a></p>
+                            <p class="dates">2022-2023</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+</section>
     <section id="loisirs">
         <h2>Loisirs</h2>
         <div class="loisirs-container">
             <div class="loisir">
                 <img src="img/manette.png" alt="Manette de jeux vidéo" class="icon">
                 <h3>Jeux Vidéos</h3>
-                <p>J'aime jouer aux jeux vidéo durant mon temps libre. Seul ou avec des amis, j'apprécie les FPS, les jeux à histoire et et RPG.</p>
+                <p>J'aime jouer aux jeux vidéo durant mon temps libre. Seul ou avec des amis, j'apprécie les FPS, les jeux à histoire et RPG.</p>
             </div>
             <div class="loisir">
                 <img src="img/sport.png" alt="Casque audio" class="icon">
@@ -220,7 +522,6 @@
             <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Mail">
         </a>
         <a href="cv.pdf" target="_blank" class="icon">📄</a>
-        <a href="tel:0783049565" class="icon">📞</a>
     </p>
 </footer>
 </body>
