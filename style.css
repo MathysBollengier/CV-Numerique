@@ -5,6 +5,18 @@ body {
     background-color: #f4f4f9;
     color: #333;
 }
+.formations p{
+    text-align: center;
+}
+
+.loisir p{
+    text-align: justify;
+}
+
+.project p{
+    text-align: justify;
+}
+
 nav {
     background-color: #333;
     color: white;
@@ -61,6 +73,7 @@ padding-top: 4%;
 h1, h2 {
     color: #f4661b;
     margin-bottom: 5%;
+    font-family: Georgia, serif;
 }
 article{
     color:white;
